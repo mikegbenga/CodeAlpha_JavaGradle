@@ -1,0 +1,12 @@
+# One place for every dependency version (Gradle version catalog).
+# Dependabot reads this file and opens a PR when something has an update.
+[versions]
+gson = "2.10.1"
+junit = "5.10.1"
+junit-platform = "1.10.1"
+jacoco = "0.8.11"
+
+[libraries]
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-platform" }

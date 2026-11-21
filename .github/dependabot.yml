@@ -1,0 +1,17 @@
+version: 2
+updates:
+  - package-ecosystem: gradle        # reads gradle/libs.versions.toml
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      junit:
+        patterns: ["org.junit*"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
