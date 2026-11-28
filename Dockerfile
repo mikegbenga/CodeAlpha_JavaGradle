@@ -2,7 +2,7 @@
 # CodeAlpha DevOps Task 3 — Java app built with Gradle
 
 ########## build ##########
-FROM eclipse-temurin:21-jdk AS build
+FROM eclipse-temurin:25-jdk AS build
 WORKDIR /src
 
 # 1) wrapper + build files first, so dependency downloads are cached as their own layer
@@ -17,7 +17,7 @@ RUN ./gradlew --no-daemon fatJar -PappVersion=${APP_VERSION} \
  && cp build/libs/*-all.jar /src/app.jar
 
 ########## runtime ##########
-FROM eclipse-temurin:21-jre-alpine AS runtime
+FROM eclipse-temurin:25-jre-alpine AS runtime
 ARG APP_VERSION=1.0.0-dev
 LABEL org.opencontainers.image.title="codealpha-task-api" \
       org.opencontainers.image.description="CodeAlpha DevOps Task 3 - Java + Gradle" \
