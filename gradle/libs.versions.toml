@@ -1,7 +1,7 @@
 # One place for every dependency version (Gradle version catalog).
 # Dependabot reads this file and opens a PR when something has an update.
 [versions]
-gson = "2.10.1"
+gson = "2.15.0"
 junit = "5.10.1"
 junit-platform = "1.10.1"
 jacoco = "0.8.11"
